@@ -1,0 +1,25 @@
+<div class="store-container">
+  <header class="main-header">
+    <h1>🛍️ Online Store</h1>
+    <div class="category-tabs">
+      @for (cat of categories; track cat.id) {
+        <button 
+          [class.active]="selectedCategoryId === cat.id"
+          (click)="selectCategory(cat.id)">
+          {{ cat.name }}
+        </button>
+      }
+    </div>
+  </header>
+
+  <main>
+    @if (selectedCategoryId) {
+      <app-product-list [categoryId]="selectedCategoryId"></app-product-list>
+    } @else {
+      <div class="welcome-screen">
+        <h2>Қош келдіңіз!</h2>
+        <p>Тауарларды көру үшін жоғарыдан санатты таңдаңыз.</p>
+      </div>
+    }
+  </main>
+</div>

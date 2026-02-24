@@ -1,0 +1,18 @@
+<div class="store-header">
+  <div class="header-content">
+    <span class="product-count">{{ filteredProducts().length }} тауар табылды</span>
+  </div>
+</div>
+
+<div class="product-grid">
+  @for (product of filteredProducts(); track product.id) {
+    <app-product-card 
+      [product]="product" 
+      (remove)="onRemoveProduct($event)">
+    </app-product-card>
+  } @empty {
+    <div class="empty-msg">
+      <p>Бұл санатта әзірге тауар жоқ немесе бәрі өшірілді.</p>
+    </div>
+  }
+</div>

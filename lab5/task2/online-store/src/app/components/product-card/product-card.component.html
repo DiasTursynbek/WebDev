@@ -1,0 +1,39 @@
+<div class="product-card">
+  <div class="gallery">
+    <div class="main-image-wrapper">
+      <a [href]="product.link" target="_blank">
+        <img [src]="currentImage" [alt]="product.name" class="main-image" />
+      </a>
+    </div>
+    
+    @if (product.images.length > 0) {
+      <div class="thumbnails">
+        @for (img of product.images; track $index) {
+          <img 
+            [src]="img" 
+            class="thumbnail" 
+            [class.active]="$index === currentImageIndex"
+            (click)="selectImage($index)">
+        }
+      </div>
+    }
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name">
+      <a [href]="product.link" target="_blank">{{ product.name }}</a>
+    </h3>
+
+    <div class="interaction-bar">
+      <button class="like-btn" (click)="onLike()">
+        ❤️ {{ product.likes }}
+      </button>
+      <button class="delete-btn" (click)="onRemove()">
+        🗑️ Өшіру
+      </button>
+    </div>
+
+    <div class="product-price">{{ product.price | number }} ₸</div>
+  </div>
+</div>
+

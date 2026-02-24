@@ -1,0 +1,34 @@
+.main-header {
+  background: #e83030;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.category-tabs {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.category-tabs button.active {
+  background: white;
+  color: #e83030;
+}
+
+.welcome-screen {
+  text-align: center;
+  padding: 100px 20px;
+  color: #666;
+}
