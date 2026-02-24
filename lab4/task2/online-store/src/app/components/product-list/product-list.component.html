@@ -1,0 +1,14 @@
+<div class="store-header">
+  <div class="header-content">
+    <h1>🛍️ Online Store</h1>
+    <p class="subtitle">Лучшие товары с <a href="https://kaspi.kz" target="_blank">Kaspi.kz</a></p>
+    <span class="product-count">{{ products.length }} товаров</span>
+  </div>
+</div>
+
+<div class="product-grid">
+  <app-product-card
+    *ngFor="let product of products"
+    [product]="product"
+  ></app-product-card>
+</div>

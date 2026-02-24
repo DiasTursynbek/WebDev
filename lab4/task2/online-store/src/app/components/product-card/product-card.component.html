@@ -1,0 +1,53 @@
+<div class="product-card">
+
+  <div class="gallery">
+    <div class="main-image-wrapper">
+      <button class="nav-btn prev" (click)="prevImage()">&#8249;</button>
+      <a [href]="product.link" target="_blank">
+        <img [src]="currentImage" [alt]="product.name" class="main-image" />
+      </a>
+      <button class="nav-btn next" (click)="nextImage()">&#8250;</button>
+    </div>
+    <div class="thumbnails">
+      <img
+        *ngFor="let img of product.images; let i = index"
+        [src]="img"
+        [alt]="product.name + ' image ' + (i + 1)"
+        class="thumbnail"
+        [class.active]="i === currentImageIndex"
+
+      />
+    </div>
+  </div>
+
+
+  <div class="product-info">
+    <h3 class="product-name">
+      <a [href]="product.link" target="_blank">{{ product.name }}</a>
+    </h3>
+
+    <p class="product-description">{{ product.description }}</p>
+
+    <div class="product-rating">
+      <span *ngFor="let filled of stars" class="star" [class.filled]="filled">★</span>
+      <span class="rating-value">{{ product.rating }}</span>
+    </div>
+
+    <div class="product-price">{{ product.price | number }} ₸</div>
+
+
+    <div class="share-container">
+      <button class="share-btn" (click)="toggleShareMenu()">
+        🔗 Share
+      </button>
+      <div class="share-menu" *ngIf="showShareMenu">
+        <button class="share-option whatsapp" (click)="shareOnWhatsApp()">
+          <span>📱</span> WhatsApp
+        </button>
+        <button class="share-option telegram" (click)="shareOnTelegram()">
+          <span>✈️</span> Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
