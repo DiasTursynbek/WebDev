@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
           Web Development course.
         </p>
         <table>
-          <tr><td class="label">Student</td><td>Mereke</td></tr>
+          <tr><td class="label">Student</td><td>Dias</td></tr>
           <tr><td class="label">Course</td><td>Web Development</td></tr>
           <tr><td class="label">Lab</td><td>Lab 6 — Routing, HTTP &amp; Services</td></tr>
           <tr><td class="label">Framework</td><td>Angular 17+ (Standalone)</td></tr>
