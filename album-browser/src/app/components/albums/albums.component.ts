@@ -73,7 +73,7 @@ import { Album } from '../../models/album.model';
       cursor: pointer;
       font-size: 0.85rem;
       font-weight: 600;
-      margin-left: 12px;
+      margin-left: 16px;
       transition: background-color 0.2s;
     }
     .btn-delete:hover { background: #c62828; }

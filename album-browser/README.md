@@ -1,4 +1,4 @@
-# Album Browser — Lab 6: Routing, HTTP & Services
+# Album Browser — Lab 6: Routing, HTTP & Services 
 
 Angular 17+ SPA demonstrating routing, HttpClient, services, and CRUD operations.
 

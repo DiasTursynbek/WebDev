@@ -20,7 +20,7 @@ export class AlbumService {
   getAlbum(id: number): Observable<Album> {
     return this.http.get<Album>(`${this.apiUrl}/albums/${id}`);
   }
-
+  
   getAlbumPhotos(id: number): Observable<Photo[]> {
     return this.http.get<Photo[]>(`${this.apiUrl}/albums/${id}/photos`);
   }
