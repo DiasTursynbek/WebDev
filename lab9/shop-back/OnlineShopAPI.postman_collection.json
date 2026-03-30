@@ -1,29 +1,258 @@
 {
-    "info": {
-      "name": "Online Shop API",
-      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  "info": {
+    "_postman_id": "5603cc5e-3da3-4e2b-9ab5-9dfb5b223867",
+    "name": "Online Shop API",
+    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53603953",
+    "_collection_link": "https://go.postman.co/collection/53603953-5603cc5e-3da3-4e2b-9ab5-9dfb5b223867?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Products by Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/products/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Electronics\",\n    \"description\": \"Electronic devices\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Updated Electronics\",\n    \"description\": \"Updated description\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     },
-    "item": [
-      {
-        "name": "Categories",
-        "item": [
-          {"name": "Get All Categories", "request": {"method": "GET", "url": "http://localhost:8000/api/categories/"}},
-          {"name": "Get Category by ID", "request": {"method": "GET", "url": "http://localhost:8000/api/categories/1/"}},
-          {"name": "Get Products by Category", "request": {"method": "GET", "url": "http://localhost:8000/api/categories/1/products/"}},
-          {"name": "Create Category", "request": {"method": "POST", "url": "http://localhost:8000/api/categories/", "body": {"mode": "raw", "raw": "{\"name\": \"Electronics\", \"description\": \"Electronic devices\"}", "options": {"raw": {"language": "json"}}}}},
-          {"name": "Update Category", "request": {"method": "PUT", "url": "http://localhost:8000/api/categories/1/", "body": {"mode": "raw", "raw": "{\"name\": \"Updated Category\", \"description\": \"Updated\"}", "options": {"raw": {"language": "json"}}}}},
-          {"name": "Delete Category", "request": {"method": "DELETE", "url": "http://localhost:8000/api/categories/1/"}}
-        ]
+    {
+      "name": "Get data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "postman-echo.com/get",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
       },
-      {
-        "name": "Products",
-        "item": [
-          {"name": "Get All Products", "request": {"method": "GET", "url": "http://localhost:8000/api/products/"}},
-          {"name": "Get Product by ID", "request": {"method": "GET", "url": "http://localhost:8000/api/products/1/"}},
-          {"name": "Create Product", "request": {"method": "POST", "url": "http://localhost:8000/api/products/", "body": {"mode": "raw", "raw": "{\"name\": \"Laptop\", \"description\": \"Gaming laptop\", \"price\": \"999.99\", \"category\": 1, \"stock\": 10}", "options": {"raw": {"language": "json"}}}}},
-          {"name": "Update Product", "request": {"method": "PUT", "url": "http://localhost:8000/api/products/1/", "body": {"mode": "raw", "raw": "{\"name\": \"Updated Laptop\", \"description\": \"Updated\", \"price\": \"899.99\", \"category\": 1, \"stock\": 5}", "options": {"raw": {"language": "json"}}}}},
-          {"name": "Delete Product", "request": {"method": "DELETE", "url": "http://localhost:8000/api/products/1/"}}
-        ]
-      }
-    ]
-  }
+      "response": []
+    },
+    {
+      "name": "Post data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "postman-echo.com/post",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    }
+  ]
+}
