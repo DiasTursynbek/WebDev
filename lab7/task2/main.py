@@ -18,7 +18,7 @@ def main():
 
         if isinstance(item, Cat):
             print(item.climb())
-
+    
         print("-" * 30)
 
 
