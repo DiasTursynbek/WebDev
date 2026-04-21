@@ -1,0 +1,19 @@
+
+> movielog-frontend@0.0.0 start
+> ng serve --port 4200
+
+Node.js version v25.6.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+- Building...
+
+Initial chunk files | Names         |  Raw size
+polyfills.js        | polyfills     |  88.09 kB | 
+main.js             | main          |  80.42 kB | 
+styles.css          | styles        |   1.06 kB | 
+
+                    | Initial total | 169.57 kB
+
+Application bundle generation complete. [1.064 seconds]
+
+Watch mode enabled. Watching for file changes...
+  ➜  Local:   http://localhost:4200/
