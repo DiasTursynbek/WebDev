@@ -18,24 +18,26 @@ api.WatchList: (models.W042) Auto-created primary key used when not defining a p
 	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
 
 System check identified 7 issues (0 silenced).
-Unauthorized: /movies/
-[21/Apr/2026 07:00:55] "GET /movies/ HTTP/1.1" 401 27
-Unauthorized: /movies/
-[21/Apr/2026 07:01:10] "GET /movies/ HTTP/1.1" 401 27
-Unauthorized: /movies/
-[21/Apr/2026 07:01:10] "GET /movies/ HTTP/1.1" 401 27
-Unauthorized: /movies/
-[21/Apr/2026 07:01:11] "GET /movies/ HTTP/1.1" 401 27
-Unauthorized: /movies/
-[21/Apr/2026 07:01:11] "GET /movies/ HTTP/1.1" 401 27
-Unauthorized: /movies/
-[21/Apr/2026 07:01:13] "GET /movies/ HTTP/1.1" 401 27
-Not Found: /api/movies/
-[21/Apr/2026 07:01:22] "GET /api/movies/ HTTP/1.1" 404 3436
-/Users/diastursynbek/Downloads/WEB project/back/project/project/urls.py changed, reloading.
+Bad Request: /auth/login/
+[21/Apr/2026 07:38:08] "POST /auth/login/ HTTP/1.1" 400 31
+Bad Request: /auth/register/
+[21/Apr/2026 07:38:20] "POST /auth/register/ HTTP/1.1" 400 41
+Bad Request: /auth/register/
+[21/Apr/2026 07:38:22] "POST /auth/register/ HTTP/1.1" 400 41
+Bad Request: /auth/register/
+[21/Apr/2026 07:38:22] "POST /auth/register/ HTTP/1.1" 400 41
+Bad Request: /auth/login/
+[21/Apr/2026 07:38:40] "POST /auth/login/ HTTP/1.1" 400 31
+Bad Request: /auth/login/
+[21/Apr/2026 07:39:16] "POST /auth/login/ HTTP/1.1" 400 31
+Bad Request: /auth/login/
+[21/Apr/2026 07:39:19] "POST /auth/login/ HTTP/1.1" 400 31
+[21/Apr/2026 07:40:05] "POST /auth/register/ HTTP/1.1" 201 52
+[21/Apr/2026 07:40:05] "GET /movies/ HTTP/1.1" 200 10232
+/Users/diastursynbek/Downloads/WEB project/back/project/api/views/fbv.py changed, reloading.
 Performing system checks...
 
-April 21, 2026 - 07:00:52
+April 21, 2026 - 07:37:57
 Django version 4.2.30, using settings 'project.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
@@ -60,106 +62,13 @@ api.WatchList: (models.W042) Auto-created primary key used when not defining a p
 	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
 
 System check identified 7 issues (0 silenced).
-Not Found: /movies/
-[21/Apr/2026 07:02:30] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:31] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:31] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:31] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:31] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:31] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:38] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:41] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:42] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:43] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:43] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:43] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:44] "GET /movies/ HTTP/1.1" 404 2203
-Performing system checks...
-
-April 21, 2026 - 07:01:38
-Django version 4.2.30, using settings 'project.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-System check identified some issues:
-
-WARNINGS:
-api.Genre: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Movie: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Note: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Review: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.UserMovie: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.UserProfile: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.WatchList: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-
-System check identified 7 issues (0 silenced).
-Not Found: /movies/
-[21/Apr/2026 07:02:46] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:46] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:47] "GET /movies/ HTTP/1.1" 404 2203
-Not Found: /movies/
-[21/Apr/2026 07:02:48] "GET /movies/ HTTP/1.1" 404 2203
-/Users/diastursynbek/Downloads/WEB project/back/project/project/urls.py changed, reloading.
-Performing system checks...
-
-April 21, 2026 - 07:02:45
-Django version 4.2.30, using settings 'project.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-System check identified some issues:
-
-WARNINGS:
-api.Genre: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Movie: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Note: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Review: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.UserMovie: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.UserProfile: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.WatchList: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-
-System check identified 7 issues (0 silenced).
-Unauthorized: /auth/logout/
-[21/Apr/2026 07:03:07] "POST /auth/logout/ HTTP/1.1" 401 27
+[21/Apr/2026 07:40:35] "GET /movies/ HTTP/1.1" 200 10232
+[21/Apr/2026 07:40:37] "POST /auth/logout/ HTTP/1.1" 200 37
 Bad Request: /auth/login/
-[21/Apr/2026 07:03:09] "POST /auth/login/ HTTP/1.1" 400 31
+[21/Apr/2026 07:40:40] "POST /auth/login/ HTTP/1.1" 400 30
 Bad Request: /auth/login/
-[21/Apr/2026 07:03:10] "POST /auth/login/ HTTP/1.1" 400 31
+[21/Apr/2026 07:40:52] "POST /auth/login/ HTTP/1.1" 400 26
 Bad Request: /auth/login/
-[21/Apr/2026 07:03:15] "POST /auth/login/ HTTP/1.1" 400 31
-Bad Request: /auth/login/
-[21/Apr/2026 07:03:16] "POST /auth/login/ HTTP/1.1" 400 31
-[21/Apr/2026 07:03:37] "POST /auth/register/ HTTP/1.1" 201 52
-[21/Apr/2026 07:03:38] "GET /movies/ HTTP/1.1" 200 10233
-[21/Apr/2026 07:04:09] "GET /movies/ HTTP/1.1" 200 10233
-[21/Apr/2026 07:04:13] "GET /movies/ HTTP/1.1" 200 10233
+[21/Apr/2026 07:40:59] "POST /auth/login/ HTTP/1.1" 400 26
+[21/Apr/2026 07:41:05] "POST /auth/login/ HTTP/1.1" 200 52
+[21/Apr/2026 07:41:05] "GET /movies/ HTTP/1.1" 200 10232

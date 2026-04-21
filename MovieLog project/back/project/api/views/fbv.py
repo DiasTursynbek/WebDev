@@ -117,14 +117,27 @@ def user_movie_detail(request, pk):
 def login_view(request):
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
-        username = serializer.validated_data['username']
+        username_or_email = serializer.validated_data['username']
         password = serializer.validated_data['password']
 
-        user = authenticate(username=username, password=password)
+        user = authenticate(username=username_or_email, password=password)
+        
+        if not user:
+            try:
+                user_obj = User.objects.get(username=username_or_email)
+            except User.DoesNotExist:
+                try:
+                    user_obj = User.objects.get(email=username_or_email)
+                except User.DoesNotExist:
+                    return Response({'error': 'User not found'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            user = authenticate(username=user_obj.username, password=password)
+            if not user:
+                return Response({'error': 'Incorrect password'}, status=status.HTTP_400_BAD_REQUEST)
+
         if user:
             token, created = Token.objects.get_or_create(user=user)
             return Response({'token': token.key})
-
         return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
